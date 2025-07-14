@@ -64,7 +64,7 @@ const Login = () => {
                 </View>
 
                 {/* Input fields container */}
-                <View className="flex-1 pt-8 px-6 ">
+                <View className="flex-1 px-6 ">
 
                     <View className="gap-5">
 
