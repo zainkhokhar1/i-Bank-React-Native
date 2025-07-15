@@ -3,8 +3,13 @@ import Fontisto from '@expo/vector-icons/Fontisto';
 import Feather from '@expo/vector-icons/Feather';
 import { useState } from 'react';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import { useNavigation } from '@react-navigation/native';
 
 const Signup = () => {
+
+    const navigation = useNavigation();
+
+
     const [isChecked, setIsChecked] = useState(false);
     const [hide, setHide] = useState(true);
     const [data, setData] = useState({
@@ -22,14 +27,16 @@ const Signup = () => {
 
     const handleSubmitData = () => {
         if (!(data.name && data.email && data.password && isChecked)) return;
-        alert(JSON.stringify(data));
+        navigation.navigate('Home');
     };
 
     return (
         <View className="bg-[#3629B7] flex-1 pt-10">
             {/* Return and title btn */}
             <View className="h-10 flex flex-row w-full items-center gap-4 px-6 mb-4">
-                <Fontisto name="angle-left" size={16} color="white" />
+                <Fontisto name="angle-left" size={16} color="white"
+                    onPress={() => navigation.goBack()}
+                />
                 <Text className="semibold text-white text-xl">
                     Sign Up
                 </Text>
@@ -62,7 +69,7 @@ const Signup = () => {
                             value={data.name}
                             onChangeText={(text) => { handleInputs('name', text) }}
                             placeholderTextColor={'#CACACA'}
-                            className="text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3"
+                            className="text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3 caret-[#343434]"
                             placeholder='Enter Name'
                         />
                         <TextInput
@@ -70,7 +77,7 @@ const Signup = () => {
                             value={data.email}
                             onChangeText={(text) => { handleInputs('email', text) }}
                             placeholderTextColor={'#CACACA'}
-                            className="text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3"
+                            className="text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3 caret-[#343434]"
                             placeholder='Enter Email'
                         />
                         <View className="relative w-full h-auto border-[#CBCBCB] border-[1px] rounded-2xl">
@@ -81,7 +88,7 @@ const Signup = () => {
                                 autoCorrect={false}
                                 placeholderTextColor={'#CACACA'}
                                 autoCapitalize='none'
-                                className="text-base h-14 w-10/12 px-3"
+                                className="text-base h-14 w-10/12 px-3 caret-[#343434]"
                                 placeholder='Enter Password'
                             />
                             <Feather name={hide ? 'eye-off' : 'eye'}
@@ -140,7 +147,9 @@ const Signup = () => {
                         <Text className="text-sm text-[#343434]">
                             Have an account?
                         </Text>
-                        <Text className="text-[#3629B7] font-semibold text-sm leading-4">
+                        <Text className="text-[#3629B7] font-semibold text-sm leading-4"
+                            onPress={() => navigation.navigate('Login')}
+                        >
                             Sign In
                         </Text>
                     </View>

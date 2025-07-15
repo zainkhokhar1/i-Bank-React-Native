@@ -2,8 +2,13 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useState } from 'react';
 import Feather from '@expo/vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 
 const EnterNewPassword = () => {
+
+  const navigation = useNavigation();
+
+
   const [hide, setHide] = useState({
     one: true,
     two: true
@@ -39,7 +44,9 @@ const EnterNewPassword = () => {
 
       {/* Header */}
       <View className="h-13 w-full flex-row items-center justify-start pt-3">
-        <Fontisto name="angle-left" size={16} color="#343434" />
+        <Fontisto name="angle-left" size={16} color="#343434"
+          onPress={() => navigation.goBack()}
+        />
         <Text className="font-semibold text-xl leading-7 pl-4 text-[#343434]">Change password</Text>
       </View>
 
@@ -58,7 +65,7 @@ const EnterNewPassword = () => {
         <View >
 
           <Text className="text-sm leading-4 font-semibold text-[#979797] pb-2">
-            Type your phone number
+            Type your new password
           </Text>
 
           <View className="relative w-full h-auto border-[#CBCBCB] border-[1px] rounded-2xl">

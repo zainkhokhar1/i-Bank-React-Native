@@ -3,8 +3,11 @@ import Fontisto from '@expo/vector-icons/Fontisto';
 import Feather from '@expo/vector-icons/Feather';
 import { useState } from 'react';
 import { ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+
+    const navigation = useNavigation();
 
     const [hide, setHide] = useState(true);
     const [data, setData] = useState({
@@ -23,7 +26,7 @@ const Login = () => {
 
     const handleSubmitData = () => {
         if (!(data.email && data.password)) return;
-        alert(JSON.stringify(data));
+        navigation.navigate('Home');
     }
 
     return (
@@ -33,7 +36,9 @@ const Login = () => {
 
             {/* Return and title btn */}
             <View className="h-10 flex flex-row w-full items-center gap-4 px-6 mb-4">
-                <Fontisto name="angle-left" size={16} color="white" />
+                <Fontisto name="angle-left" size={16} color="white"
+                    onPress={() => navigation.goBack()}
+                />
                 <Text className="semibold text-white text-xl">
                     Sign in
                 </Text>
@@ -72,7 +77,7 @@ const Login = () => {
                             value={data.email}
                             onChangeText={(text) => { handleInputs('email', text) }}
                             placeholderTextColor={'#CACACA'}
-                            className=" text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3"
+                            className=" text-medium text-base border-[#CBCBCB] border-[1px] h-14 w-full rounded-2xl px-3 caret-[#343434]"
                             placeholder='Enter Email'
                         />
                         <View className="relative w-full h-auto border-[#CBCBCB] border-[1px] rounded-2xl">
@@ -83,7 +88,7 @@ const Login = () => {
                                 autoCorrect={false}
                                 placeholderTextColor={'#CACACA'}
                                 autoCapitalize='none'
-                                className="text-base h-14 w-10/12 px-3"
+                                className="text-base h-14 w-10/12 px-3 caret-[#343434]"
                                 placeholder='Enter Password'
                             />
                             {/* icon shown here */}
@@ -98,8 +103,9 @@ const Login = () => {
                     </View>
 
                     <Text
-                        style={{ textAlign: 'right' }} //because nativeWind not working for this one
-                        className="text-[#3629B7]/80 font-medium text-sm pt-2">
+                        className="text-[#3629B7]/80 font-medium text-sm pt-2 text-right"
+                        onPress={() => navigation.navigate('EnterNumber')}
+                    >
                         Forgot your password ?
                     </Text>
 
@@ -127,7 +133,9 @@ const Login = () => {
                         <Text className="text-sm text-[#343434]">
                             Don't have an account?
                         </Text>
-                        <Text className="text-[#3629B7] font-semibold text-sm leading-4">
+                        <Text className="text-[#3629B7] font-semibold text-sm leading-4"
+                            onPress={() => navigation.navigate('Signup')}
+                        >
                             Sign Up
                         </Text>
                     </View>

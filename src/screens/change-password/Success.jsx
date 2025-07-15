@@ -35,7 +35,7 @@ const Success = () => {
                     activeOpacity={0.8}
                     className={`bg-[#3629B7] flex items-center justify-center min-w-full h-[46px] rounded-2xl mb-6`}>
                     <Text className="font-medium text-base text-white leading-6">
-                        Sign Up
+                        Ok
                     </Text>
                 </TouchableOpacity>
             </View>

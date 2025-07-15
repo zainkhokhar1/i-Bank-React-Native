@@ -1,17 +1,29 @@
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto';
+import { useNavigation } from '@react-navigation/native';
 
 
-const EnterCode = () => {
+const EnterCode = ({ route }) => {
+    const navigation = useNavigation();
+
+    const { number } = route.params;
+
     const [code, setCode] = useState('');
+
+    const handleCode = () => {
+        if (code.length == 4)
+            navigation.navigate('EnterNewPassword')
+    }
 
     return (
         <View className="flex-1 pt-10 px-6">
 
             {/* Header */}
             <View className="h-13 w-full flex-row items-center justify-start pt-3">
-                <Fontisto name="angle-left" size={16} color="#343434" />
+                <Fontisto name="angle-left" size={16} color="#343434"
+                    onPress={() => navigation.goBack()}
+                />
                 <Text className="font-semibold text-xl leading-7 pl-4 text-[#343434]">Forgot password</Text>
             </View>
 
@@ -39,7 +51,7 @@ const EnterCode = () => {
                         maxLength={4}
                         keyboardType="number-pad"
                         onChangeText={(text) => setCode(text.replace(/[^0-9]/g, ''))}
-                        className="flex-1 h-12 px-3 bg-[#FAFAFC] text-[#343434] text-sm font-medium rounded-2xl border border-[#CBCBCB] leading-[150%]"
+                        className="flex-1 h-12 px-3 bg-[#FAFAFC] text-[#343434] text-sm font-medium rounded-2xl border border-[#CBCBCB] leading-[150%] caret-[#343434]"
                         placeholder="Code"
                         placeholderTextColor="#CACACA"
                     />
@@ -55,7 +67,7 @@ const EnterCode = () => {
                     <Text className="text-[#898989] text-sm font-medium leading-[150%]">
                         We texted you a code to verify your phone number
                     </Text>
-                    <Text className="text-[#5655B9] ml-[0.5px] text-sm font-semibold leading-[150%]">(92) 3037924485</Text>
+                    <Text className="text-[#5655B9] ml-[0.5px] text-sm font-semibold leading-[150%]">(92) {number?.slice(2)}</Text>
                 </View>
 
                 <Text className="text-[#898989] text-sm font-medium leading-[150%]">
@@ -64,11 +76,12 @@ const EnterCode = () => {
 
                 {/* Change Password Button */}
                 <TouchableOpacity
-                    onPress={() => { alert(code) }}
+                    onPress={handleCode}
                     disabled={code.length !== 4}
                     activeOpacity={code.length === 4 ? 0.8 : 1}
                     className={`mt-8 h-[46px] rounded-2xl justify-center items-center ${code.length === 4 ? 'bg-[#3629B7]' : 'bg-[#F2F1F9]'
                         }`}
+
                 >
                     <Text className="text-white font-medium text-base leading-6">Change password</Text>
                 </TouchableOpacity>
