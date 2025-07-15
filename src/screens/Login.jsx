@@ -99,7 +99,7 @@ const Login = () => {
 
                     <Text
                         style={{ textAlign: 'right' }} //because nativeWind not working for this one
-                        className="text-[#CACACA] font-medium text-sm pt-1">
+                        className="text-[#3629B7]/80 font-medium text-sm pt-2">
                         Forgot your password ?
                     </Text>
 

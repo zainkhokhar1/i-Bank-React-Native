@@ -1,8 +1,10 @@
 import "./global.css";
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Login from "./src/screens/Login";
 import Signup from "./src/screens/Signup";
+import EnterNumber from "./src/screens/forgot-password/EnterNumber";
+import EnterCode from "./src/screens/forgot-password/EnterCode";
 
 export default function App() {
   return (
@@ -10,9 +12,14 @@ export default function App() {
       <StatusBar
         style="light"
       />
-      <Login />
+
+      {/* <Login /> */}
 
       {/* <Signup /> */}
+
+      {/* <EnterNumber /> */}
+
+      {/* <EnterCode /> */}
 
     </View>
   );
