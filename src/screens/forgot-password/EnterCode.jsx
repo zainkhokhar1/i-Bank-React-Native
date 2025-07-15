@@ -70,7 +70,7 @@ const EnterCode = ({ route }) => {
                     <Text className="text-[#5655B9] ml-[0.5px] text-sm font-semibold leading-[150%]">(92) {number?.slice(2)}</Text>
                 </View>
 
-                <Text className="text-[#898989] text-sm font-medium leading-[150%]">
+                <Text className="text-[#89|8989] text-sm font-medium leading-[150%]">
                     This code will expire 10 minutes after this message. If you don’t get a message.
                 </Text>
 
@@ -88,8 +88,10 @@ const EnterCode = ({ route }) => {
             </View>
 
             {/* Change phone number text */}
-            <View className="items-center mt-[68px]">
-                <Text className="text-[#3629B7] font-semibold text-sm">Change your phone number</Text>
+            <View className="items-center mt-[68px]" >
+                <Text className="text-[#3629B7] font-semibold text-sm"
+                    onPress={() => navigation.navigate('EnterNumber')}
+                >Change your phone number</Text>
             </View>
         </View>
     );
