@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import Fontisto from '@expo/vector-icons/Fontisto';
 
 const Success = () => {
     return (
