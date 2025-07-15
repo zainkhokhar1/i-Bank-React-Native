@@ -105,6 +105,7 @@ const Login = () => {
 
                     {/* Sign in btn */}
                     <TouchableOpacity
+                        disabled={!(data.email && data.password)}
                         onPress={handleSubmitData}
                         activeOpacity={data.email && data.password ? 0.8 : 1}
                         className={`${data.email && data.password ? 'bg-[#3629B7]' : 'bg-[#F2F1F9]'} flex items-center justify-center w-full h-[46px] rounded-2xl mt-10 mb-6`}>

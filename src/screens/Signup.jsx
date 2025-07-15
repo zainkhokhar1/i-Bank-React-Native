@@ -126,6 +126,7 @@ const Signup = () => {
 
                     {/* Sign up btn */}
                     <TouchableOpacity
+                        disabled={!(data.name && data.email && data.password)}
                         onPress={handleSubmitData}
                         activeOpacity={data.name && data.email && data.password && isChecked ? 0.8 : 1}
                         className={`${data.name && data.email && data.password && isChecked ? 'bg-[#3629B7]' : 'bg-[#F2F1F9]'} flex items-center justify-center w-full h-[46px] rounded-2xl mt-10 mb-6`}>

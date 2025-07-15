@@ -7,9 +7,9 @@ const EnterNumber = () => {
     const [numberEntered, setNumberEntered] = useState('+92');
 
     return (
-        <View className="pt-10 px-6">
+        <View className="flex-1 pt-10 px-6">
 
-            {/* go back container */}
+            {/* Header */}
             <View className="h-13 w-full flex-row items-center justify-start pt-3">
                 <Fontisto name="angle-left" size={16} color="#343434" />
                 <Text className="font-semibold text-xl leading-7 pl-4 text-[#343434]">Forgot password</Text>
@@ -18,14 +18,12 @@ const EnterNumber = () => {
             {/* Input and button container */}
             <View className=" w-full min-h-[240px] rounded-2xl border border-transparent p-4 mt-6"
                 style={{
-                    shadowColor: 'rgba(54, 41, 183, 0.1)',
-                    shadowOffset: {
-                        width: 0,
-                        height: 2,
-                    },
-                    shadowOpacity: 1,
+                    backgroundColor: 'white',
+                    shadowColor: '#000',
+                    shadowOffset: { width: 0, height: 4 },
+                    shadowOpacity: 0.05,
                     shadowRadius: 20,
-                    elevation: 5,
+                    elevation: 2,
                 }}
             >
                 <Text className="text-sm leading-4 font-semibold text-[#979797] pb-4">
@@ -51,6 +49,7 @@ const EnterNumber = () => {
                 {/* Button */}
 
                 <TouchableOpacity
+                    disabled={!((numberEntered.length == 12) && (numberEntered.slice(0, 2) == '92'))}
                     activeOpacity={((numberEntered.length == 12) && (numberEntered.slice(0, 2) == '92')) ? 0.8 : 1}
                     className={`flex items-center justify-center w-full h-[46px] rounded-2xl ${((numberEntered.length == 12) && (numberEntered.slice(0, 2) == '92')) ? 'bg-[#3629B7]' : 'bg-[#F2F1F9]'}`}>
                     <Text className="font-medium text-base text-white leading-6">
