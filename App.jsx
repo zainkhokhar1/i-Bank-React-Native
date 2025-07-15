@@ -6,6 +6,7 @@ import Signup from "./src/screens/Signup";
 import EnterNumber from "./src/screens/forgot-password/EnterNumber";
 import EnterCode from "./src/screens/forgot-password/EnterCode";
 import EnterNewPassword from "./src/screens/change-password/EnterNewPassword";
+import Success from "./src/screens/change-password/Success";
 
 export default function App() {
   return (
@@ -22,7 +23,9 @@ export default function App() {
 
       {/* <EnterCode /> */}
 
-      <EnterNewPassword />
+      {/* <EnterNewPassword /> */}
+
+      <Success />
 
     </View>
   );
