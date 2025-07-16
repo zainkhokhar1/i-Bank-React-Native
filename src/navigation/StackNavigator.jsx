@@ -7,7 +7,7 @@ import EnterNumber from '../screens/forgot-password/EnterNumber';
 import EnterCode from '../screens/forgot-password/EnterCode';
 import EnterNewPassword from '../screens/change-password/EnterNewPassword';
 import Success from '../screens/change-password/Success';
-import Home from '../screens/Home';
+import TabNavigator from './TabNavigator.jsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +21,9 @@ const StackNavigator = () => {
                 <Stack.Screen name="EnterCode" component={EnterCode} />
                 <Stack.Screen name="EnterNewPassword" component={EnterNewPassword} />
                 <Stack.Screen name="Success" component={Success} />
-                <Stack.Screen name="Home" component={Home} />
+
+                {/* Home using Tab Navigation */}
+                <Stack.Screen name="Home" component={TabNavigator} />
             </Stack.Navigator>
         </NavigationContainer>
     );
