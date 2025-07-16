@@ -17,6 +17,7 @@ export default function TabNavigator() {
             initialRouteName="Home"
             screenOptions={{
                 headerShown: false,
+                animationEnabled: true
             }}
             // using custom tab bar
             tabBar={(props) => <CustomTabBar {...props} />}

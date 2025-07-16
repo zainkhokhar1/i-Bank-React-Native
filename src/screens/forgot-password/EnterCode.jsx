@@ -2,6 +2,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
+import { styles } from '../../../style';
 
 
 const EnterCode = ({ route }) => {
@@ -29,15 +30,8 @@ const EnterCode = ({ route }) => {
 
             {/* White Card Container */}
             <View
-                className=" w-full min-h-[240px] rounded-2xl border border-transparent p-4 mt-6"
-                style={{
-                    backgroundColor: 'white',
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 20,
-                    elevation: 2,
-                }}
+                className="bg-white w-full min-h-[240px] rounded-2xl border border-transparent p-4 mt-6"
+                style={styles.shadow}
             >
                 {/* Label */}
                 <Text className="text-sm leading-4 font-semibold text-[#979797] pb-4">

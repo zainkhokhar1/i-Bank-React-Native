@@ -1,39 +1,22 @@
 import { View, Image, Text } from 'react-native'
+import { styles } from '../../../style'
 
 const Card = () => {
     return (
         <View className="relative flex-1 mt-12 items-center mb-8">
 
             <View className="bg-[#5655B9] rounded-[10px] w-10/12 h-[165px] relative z-0"
-                style={{
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 20,
-                    elevation: 2,
-                }}
+                style={styles.shadow}
             >
             </View>
 
             <View className="bg-[#FF4267] rounded-[10px] w-11/12 h-[165px] z-10 absolute bottom-3"
-                style={{
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 20,
-                    elevation: 2,
-                }}
+                style={styles.shadow}
             >
             </View>
 
             <View className="bg-[#1573FF] rounded-[10px] w-full h-[165px] z-10 absolute bottom-6 overflow-hidden"
-                style={{
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 20,
-                    elevation: 2,
-                }}
+                style={styles.shadow}
             >
                 {/* first circle on the right */}
                 <View className="h-[185px] w-[191px] absolute rounded-full -right-[90px] -top-[80px]">

@@ -71,9 +71,9 @@ const Login = () => {
 
     return (
         <View className="bg-[#3629B7] flex-1 pt-10">
-            <View className="h-10 flex flex-row w-full items-center gap-4 px-6 mb-4">
+            <View className="h-14 flex flex-row w-full items-center gap-4 px-6 mb-4">
                 <Fontisto name="angle-left" size={16} color="white" onPress={() => navigation.goBack()} />
-                <Text className="semibold text-white text-xl">Sign in</Text>
+                <Text className="font-semibold text-white leading-7 text-xl">Sign in</Text>
             </View>
 
             <ScrollView className="bg-white flex-1 rounded-tl-[30px] rounded-tr-[30px]">

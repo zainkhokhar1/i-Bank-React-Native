@@ -33,11 +33,11 @@ const Signup = () => {
     return (
         <View className="bg-[#3629B7] flex-1 pt-10">
             {/* Return and title btn */}
-            <View className="h-10 flex flex-row w-full items-center gap-4 px-6 mb-4">
+            <View className="h-14 flex flex-row w-full items-center gap-4 px-6 mb-4">
                 <Fontisto name="angle-left" size={16} color="white"
                     onPress={() => navigation.goBack()}
                 />
-                <Text className="semibold text-white text-xl">
+                <Text className="font-semibold leading-7 text-white text-xl">
                     Sign Up
                 </Text>
             </View>

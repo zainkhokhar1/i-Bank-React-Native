@@ -2,6 +2,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { styles } from '../../../style';
 
 const EnterNumber = () => {
 
@@ -21,15 +22,8 @@ const EnterNumber = () => {
             </View>
 
             {/* Input and button container */}
-            <View className=" w-full min-h-[240px] rounded-2xl border border-transparent p-4 mt-6"
-                style={{
-                    backgroundColor: 'white',
-                    shadowColor: '#000',
-                    shadowOffset: { width: 0, height: 4 },
-                    shadowOpacity: 0.05,
-                    shadowRadius: 20,
-                    elevation: 2,
-                }}
+            <View className=" w-full min-h-[240px] bg-white rounded-2xl border border-transparent p-4 mt-6"
+                style={styles.shadow}
             >
                 <Text className="text-sm leading-4 font-semibold text-[#979797] pb-4">
                     Type your phone number

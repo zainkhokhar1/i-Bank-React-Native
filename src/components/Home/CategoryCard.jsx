@@ -1,16 +1,11 @@
 import { View, Text, Image } from 'react-native'
+import { styles } from '../../../style';
 
 const CategoryCard = ({ text, url }) => {
     return (
         <View
             className="w-[96px] h-[96px] flex flex-col items-center border border-transparent px-[14px] pt-4 rounded-2xl bg-white"
-            style={{
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 4 },
-                shadowOpacity: 0.05,
-                shadowRadius: 20,
-                elevation: 2,
-            }}
+            style={styles.shadow}
         >
             <Image
                 source={url}
