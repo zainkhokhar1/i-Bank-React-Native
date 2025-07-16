@@ -2,7 +2,7 @@ import { View, Image, Text } from 'react-native'
 
 const Card = () => {
     return (
-        <View className="relative flex-1 mt-12 items-center">
+        <View className="relative flex-1 mt-12 items-center mb-8">
 
             <View className="bg-[#5655B9] rounded-[10px] w-10/12 h-[165px] relative z-0"
                 style={{
@@ -58,7 +58,7 @@ const Card = () => {
                 </View>
 
                 <Text className="text-white text-2xl relative top-5 left-5">
-                    John Smith
+                    Muhammad Zain ...
                 </Text>
 
                 <Text className="text-white text-sm font-medium leading-4 relative top-[30px] left-5">
