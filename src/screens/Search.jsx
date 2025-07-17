@@ -12,28 +12,32 @@ const Search = () => {
       url: {
         img: require('../../assets/images/Search/img-1.png')
       },
-      para: 'Search for branch'
+      para: 'Search for branch',
+      redirect: "SearchForBranch"
     },
     {
       text: 'Interest rate',
       url: {
         img: require('../../assets/images/Search/img-2.png')
       },
-      para: 'Search for interest rate'
+      para: 'Search for interest rate',
+      redirect: "InterestRate"
     },
     {
       text: 'Echange rate',
       url: {
         img: require('../../assets/images/Search/img-3.png')
       },
-      para: 'Search for exchange rate'
+      para: 'Search for exchange rate',
+      redirect: "ExchangeRate"
     },
     {
       text: 'Exchange',
       url: {
         img: require('../../assets/images/Search/img-4.png')
       },
-      para: 'Exchange amout of money'
+      para: 'Exchange amout of money',
+      redirect: "Exchange"
     },
   ]
 
@@ -45,7 +49,7 @@ const Search = () => {
           onPress={() => navigation.goBack()}
         />
         <Text className="font-semibold leading-7 text-[#343434] text-xl">
-          Sign Up
+          Search
         </Text>
       </View>
 
@@ -58,6 +62,7 @@ const Search = () => {
               text={one.text}
               para={one.para}
               url={one.url.img}
+              redirect={one.redirect}
             />
           ))
         }

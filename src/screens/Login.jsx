@@ -28,7 +28,7 @@ const Login = () => {
 
     const handleSubmitData = () => {
         if (!(data.email && data.password)) return;
-        navigation.navigate('Home');
+        navigation.navigate('HomeStack', { screen: 'Home' });
     };
 
     const handleBioMetricAuth = async () => {
@@ -56,7 +56,7 @@ const Login = () => {
         });
 
         if (biometricAuth.success) {
-            navigation.navigate('Home');
+            navigation.navigate('HomeStack', { screen: 'Home' });
             Toast.show('Authentication Successfull', {
                 duration: Toast.durations.SHORT,
                 position: Toast.positions.CENTER,

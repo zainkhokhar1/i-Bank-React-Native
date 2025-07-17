@@ -1,11 +1,16 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { styles } from '../../../style.js';
+import { useNavigation } from '@react-navigation/native';
 
-const Card = ({ text, url, para }) => {
+const Card = ({ text, url, para, redirect }) => {
+    const navigation = useNavigation();
+
     return (
-        <View
+        <TouchableOpacity
+            activeOpacity={0.8}
             style={styles.shadow}
             className="h-[110px] w-full rounded-2xl bg-white flex-row justify-between p-4 mt-[10px]"
+            onPress={() => navigation.navigate(redirect)}
         >
 
             {/* First to show the content */}
@@ -22,7 +27,7 @@ const Card = ({ text, url, para }) => {
                 />
             </View>
 
-        </View >
+        </TouchableOpacity >
     )
 }
 

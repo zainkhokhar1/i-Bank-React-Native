@@ -10,3 +10,18 @@ export const styles = StyleSheet.create({
         elevation: 2,
     }
 });
+
+export const mapCustomStyle = [  // Greyscale style
+    {
+        elementType: 'geometry',
+        stylers: [{ color: '#F5F5F5' }],
+    },
+    {
+        elementType: 'labels.icon',
+        stylers: [{ visibility: 'off' }],
+    },
+    {
+        featureType: 'streets',
+        stylers: [{ color: '#C9C9C9' }],
+    },
+];
