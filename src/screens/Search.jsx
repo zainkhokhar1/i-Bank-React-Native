@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from 'react-native'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
 import Card from '../components/Search/Card';
+import TopBar from '../components/general/TopBar';
 
 const Search = () => {
   const navigation = useNavigation();
@@ -44,14 +45,8 @@ const Search = () => {
   return (
     <View className='flex-1 mt-10 bg-white'>
       {/* Return and title btn */}
-      <View className="h-14 flex flex-row w-full items-center gap-4 px-6 mb-4">
-        <Fontisto name="angle-left" size={16} color="#343434"
-          onPress={() => navigation.goBack()}
-        />
-        <Text className="font-semibold leading-7 text-[#343434] text-xl">
-          Search
-        </Text>
-      </View>
+      {/* Header */}
+      <TopBar text={'Search'} textColor={'text-[#343434]'} iconColor={'#343434'} />
 
       {/* Container to show the cards */}
       <ScrollView className="flex-1 p-6">

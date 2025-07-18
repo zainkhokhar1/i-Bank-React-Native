@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import * as LocalAuthentication from 'expo-local-authentication';
 
 import Toast from 'react-native-root-toast';
+import TopBar from '../components/general/TopBar';
 
 
 const Login = () => {
@@ -71,10 +72,9 @@ const Login = () => {
 
     return (
         <View className="bg-[#3629B7] flex-1 pt-10">
-            <View className="h-14 flex flex-row w-full items-center gap-4 px-6 mb-4">
-                <Fontisto name="angle-left" size={16} color="white" onPress={() => navigation.goBack()} />
-                <Text className="font-semibold text-white leading-7 text-xl">Sign in</Text>
-            </View>
+
+            {/* Return and title btn */}
+            <TopBar text={'Sign up'} iconColor={'white'} textColor={'text-[#fff]'} />
 
             <ScrollView className="bg-white flex-1 rounded-tl-[30px] rounded-tr-[30px]">
                 <View className="pt-6 pl-6">

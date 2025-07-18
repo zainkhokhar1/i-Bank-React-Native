@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from '../../../style';
+import TopBar from '../../components/general/TopBar';
 
 
 const EnterCode = ({ route }) => {
@@ -20,7 +21,6 @@ const EnterCode = ({ route }) => {
     return (
         <View className="flex-1 pt-10 px-6">
 
-            {/* Header */}
             <View className="h-13 w-full flex-row items-center justify-start pt-3">
                 <Fontisto name="angle-left" size={16} color="#343434"
                     onPress={() => navigation.goBack()}

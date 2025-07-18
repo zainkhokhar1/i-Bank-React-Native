@@ -117,3 +117,4 @@ export const interestData = [
   { InterestKind: 'Multi Cap Fund', Deposit: 2100090, Rate: 6.8 }
 ];
 
+

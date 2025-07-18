@@ -4,6 +4,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { useState } from 'react';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { useNavigation } from '@react-navigation/native';
+import TopBar from '../components/general/TopBar';
 
 const Signup = () => {
 
@@ -32,15 +33,9 @@ const Signup = () => {
 
     return (
         <View className="bg-[#3629B7] flex-1 pt-10">
+
             {/* Return and title btn */}
-            <View className="h-14 flex flex-row w-full items-center gap-4 px-6 mb-4">
-                <Fontisto name="angle-left" size={16} color="white"
-                    onPress={() => navigation.goBack()}
-                />
-                <Text className="font-semibold leading-7 text-white text-xl">
-                    Sign Up
-                </Text>
-            </View>
+            <TopBar text={'Sign up'} iconColor={'white'} textColor={'text-[#fff]'} />
 
             {/* Main container */}
             <ScrollView className="bg-white flex-1 rounded-tl-[30px] rounded-tr-[30px]">
