@@ -1,32 +1,36 @@
+import * as Location from 'expo-location';
+import { useEffect, useState } from 'react';
 
-
-const useGetUserLoca = () => {
+const useGetUserLocation = () => {
+    const [currentUserLocations, setCurrentUserLocations] = useState({
+        latitude: 33.7150,
+        longitude: 73.0662,
+    });
 
     useEffect(() => {
 
         const getUserLocation = async () => {
-        const { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-            setErrors('Permission to location was not granted');
-            return;
-        }
-        let { coords } = await Location.getCurrentPositionAsync();
+            const { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+                return;
+            }
+            let { coords } = await Location.getCurrentPositionAsync();
 
-        if (coords) {
-            setCurrentUserLocation({
-                latitude: coords.latitude,
-                longitude: coords.longitude,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
-            });
+            if (coords) {
+                setCurrentUserLocations({
+                    latitude: coords.latitude,
+                    longitude: coords.longitude,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                });
+            }
         }
-    }
 
         getUserLocation();
     }, []);
 
-    return { currentUserLocation, errors };
+    return { currentUserLocations };
 
 }
 
-export default useGetUserLoca;
+export default useGetUserLocation;

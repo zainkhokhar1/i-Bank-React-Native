@@ -1,4 +1,3 @@
-
 export const addresses = [
   {
     id: 1,
@@ -6,6 +5,7 @@ export const addresses = [
     description: "Islamabad",
     latitude: 33.7206,
     longitude: 73.0652,
+    distance: "1.2 km"
   },
   {
     id: 2,
@@ -13,6 +13,7 @@ export const addresses = [
     description: "Rawalpindi",
     latitude: 33.5973,
     longitude: 73.0486,
+    distance: "850 m"
   },
   {
     id: 3,
@@ -20,6 +21,7 @@ export const addresses = [
     description: "Islamabad",
     latitude: 33.7070,
     longitude: 73.0551,
+    distance: "2.5 km"
   },
   {
     id: 4,
@@ -27,6 +29,7 @@ export const addresses = [
     description: "Rawalpindi",
     latitude: 33.5375,
     longitude: 73.0788,
+    distance: "4.1 km"
   },
   {
     id: 5,
@@ -34,6 +37,7 @@ export const addresses = [
     description: "DHA, Islamabad",
     latitude: 33.5132,
     longitude: 73.0580,
+    distance: "3.3 km"
   },
   {
     id: 6,
@@ -41,6 +45,7 @@ export const addresses = [
     description: "Islamabad",
     latitude: 33.6938,
     longitude: 73.0251,
+    distance: "1.9 km"
   },
   {
     id: 7,
@@ -48,6 +53,7 @@ export const addresses = [
     description: "Rawalpindi",
     latitude: 33.5524,
     longitude: 73.1212,
+    distance: "7.8 km"
   },
   {
     id: 8,
@@ -55,6 +61,7 @@ export const addresses = [
     description: "Islamabad",
     latitude: 33.7056,
     longitude: 73.0420,
+    distance: "5.4 km"
   },
   {
     id: 9,
@@ -62,6 +69,7 @@ export const addresses = [
     description: "Islamabad/Rawalpindi Border",
     latitude: 33.6646,
     longitude: 73.0759,
+    distance: "950 m"
   },
   {
     id: 10,
@@ -69,5 +77,6 @@ export const addresses = [
     description: "Islamabad",
     latitude: 33.7104,
     longitude: 73.0551,
-  },
+    distance: "1.0 km"
+  }
 ];

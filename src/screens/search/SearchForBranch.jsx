@@ -2,6 +2,7 @@ import { View, Text, Image } from 'react-native'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
 import Map from '../../components/Search/Map';
+import SearchBranchContainer from '../../components/Search/SearchBranchContainer';
 
 const SearchForBranch = () => {
   const navigation = useNavigation();
@@ -22,6 +23,9 @@ const SearchForBranch = () => {
       {/* First container to show the map */}
       <View className="flex-1">
         <Map />
+
+        {/* Search for branch section */}
+        <SearchBranchContainer />
       </View>
 
     </View>
