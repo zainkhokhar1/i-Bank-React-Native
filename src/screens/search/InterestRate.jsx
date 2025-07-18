@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
+import Container from '../../components/Interest-rate/Container';
 
 const InterestRate = () => {
   const navigation = useNavigation();
@@ -15,6 +16,8 @@ const InterestRate = () => {
           Interest rate
         </Text>
       </View>
+
+      <Container />
 
     </View>
   )
