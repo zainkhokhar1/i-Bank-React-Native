@@ -1,15 +1,15 @@
-import { View, Text } from 'react-native'
-import { useNavigation } from '@react-navigation/native';
+import { View } from 'react-native'
 import TopBar from '../../components/general/TopBar';
+import Container from '../../components/exchange-rate/Container';
 
 const ExchangeRate = () => {
-  const navigation = useNavigation();
-
   return (
     <View className="flex-1 pt-10">
 
       {/* Return and title btn */}
       <TopBar text={'Exchange Rate'} />
+
+      <Container />
 
     </View>
   )

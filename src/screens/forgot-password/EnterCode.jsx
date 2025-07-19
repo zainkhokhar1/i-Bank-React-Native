@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Fontisto from '@expo/vector-icons/Fontisto';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from '../../../style';
-import TopBar from '../../components/general/TopBar';
 
 
 const EnterCode = ({ route }) => {

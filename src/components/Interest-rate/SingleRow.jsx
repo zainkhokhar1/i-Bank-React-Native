@@ -1,6 +1,5 @@
 import { View, Text } from 'react-native';
 
-
 const SingleRow = ({ item }) => {
     return (
         <View
